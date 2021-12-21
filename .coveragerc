@@ -1,0 +1,4 @@
+[run]
+omit =
+    daily_scrum_bot/__main__.py
+    tests/*
