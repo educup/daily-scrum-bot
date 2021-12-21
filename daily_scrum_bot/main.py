@@ -3,7 +3,7 @@ import typer
 
 from daily_scrum_bot.commands import user_app
 
-app = typer.Typer(help="Daily Scrum Telegram Bot CLI")
+app = typer.Typer(help="Daily Scrum Telegram Bot CLI", no_args_is_help=True)
 
 app.add_typer(user_app, name="user")
 
