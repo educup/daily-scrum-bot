@@ -1,8 +1,13 @@
+from typing import Optional
 import typer
 
-app = typer.Typer()
+from daily_scrum_bot.commands import user_app
+
+app = typer.Typer(help="Daily Scrum Telegram Bot CLI")
+
+app.add_typer(user_app, name="user")
 
 
-@app.command()
-def run():
-    typer.echo("Hello World!")
+@app.command(name="start", help="Start telegram bot")
+def start():
+    typer.echo("Starting Bot...")
