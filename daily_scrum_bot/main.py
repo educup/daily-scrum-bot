@@ -9,9 +9,6 @@ from daily_scrum_bot.settings import get_settings
 settings = get_settings()
 TOKEN = settings.telegram_bot_token
 
-SERVER = settings.mongo_db_server
-init(SERVER)
-
 LOGLEVEL = settings.logging_level
 logging.getLogger(__name__).setLevel(LOGLEVEL)
 
